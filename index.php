@@ -1,4 +1,4 @@
-﻿<?php
+﻿﻿<?php
 
 spl_autoload_register(function ($class_name) {
     include $class_name . '.php';
@@ -11,6 +11,7 @@ try {
 
     if ($_POST ?? false) {
         $show->add();
+
     }
     if ($_GET['del_id'] ?? false) {
         $show->delete();
@@ -27,10 +28,10 @@ try {
     <meta charset="UTF-8">
 
     <title>address ::: user office ::: foodclub</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic&subset=latin,latin-ext'
-          rel='stylesheet' type='text/css'>
-    <link href="assets/css/default.css" rel="stylesheet" type="text/css"/>
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="assets/css/default.css" rel="stylesheet" type="text/css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiPJOLvBwrSUQAuxp3BZyaJwrPeHPJ0EY&callback=initMap"
+            async defer></script>
 
 </head>
 
@@ -42,7 +43,7 @@ try {
                 <div class="wrapper">
 
                     <div class="logo_box">
-                        <a href="index.php"><img src="assets/img/logo.png" alt="foodclub"/></a>
+                        <a href="index.html"><img src="assets/img/logo.png" alt="foodclub" /></a>
                     </div>
 
                     <div class="lng_box">
@@ -71,8 +72,7 @@ try {
                                             <span class="ico ico_1"></span>
                                             <div class="text_box">
                                                 <h3>5 points</h3>
-                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your
-                                                    balance!</p>
+                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your balance!</p>
                                             </div>
                                             <a href="#" class="gcross"></a>
                                         </li>
@@ -80,8 +80,7 @@ try {
                                             <span class="ico ico_2"></span>
                                             <div class="text_box">
                                                 <h3>5 points</h3>
-                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your
-                                                    balance!</p>
+                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your balance!</p>
                                             </div>
                                             <a href="#" class="gcross"></a>
                                         </li>
@@ -89,8 +88,7 @@ try {
                                             <span class="ico ico_3"></span>
                                             <div class="text_box">
                                                 <h3>5 points</h3>
-                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your
-                                                    balance!</p>
+                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your balance!</p>
                                             </div>
                                             <a href="#" class="gcross"></a>
                                         </li>
@@ -100,7 +98,7 @@ try {
                             </div>
                             <div class="navbox">
                                 <a href="#" class="midbox nftoggle">
-                                    <img src="assets/imgc/user_ava_1_40.jpg" alt=""/>
+                                    <img src="assets/imgc/user_ava_1_40.jpg" alt="" />
                                     <span class="warrd"></span>
                                 </a>
                                 <nav class="utnav">
@@ -115,75 +113,74 @@ try {
                                         <li><a href="#" class="logout">Log Out</a></li>
                                     </ul>
                                 </nav>
-                            </div>
 
-                            <!--
-                                <nav class="utnav">
-                                    <ul>
-                                        <li><a href="#">Menu</a></li>
-                                        <li><a href="#">Orders</a></li>
-                                        <li><a href="#">Reviews</a></li>
-                                        <li><a href="#">Account Settings</a></li>
-                                        <li><a href="#">Profile Settings</a></li>
-                                        <li class="sepor"></li>
-                                        <li><a href="#">Subway</a></li>
-                                        <li><a href="#">McDonalds</a></li>
-                                        <li class="sepor"></li>
-                                        <li><a href="#"><span class="bplus"></span> Add Restaurant</a></li>
-                                        <li class="sepor"></li>
-                                        <li><a href="#" class="logout">Log Out</a></li>
-                                    </ul>
-                                </nav>
-                             -->
+                                <!--
+                                    <nav class="utnav">
+                                        <ul>
+                                            <li><a href="#">Menu</a></li>
+                                            <li><a href="#">Orders</a></li>
+                                            <li><a href="#">Reviews</a></li>
+                                            <li><a href="#">Account Settings</a></li>
+                                            <li><a href="#">Profile Settings</a></li>
+                                            <li class="sepor"></li>
+                                            <li><a href="#">Subway</a></li>
+                                            <li><a href="#">McDonalds</a></li>
+                                            <li class="sepor"></li>
+                                            <li><a href="#"><span class="bplus"></span> Add Restaurant</a></li>
+                                            <li class="sepor"></li>
+                                            <li><a href="#" class="logout">Log Out</a></li>
+                                        </ul>
+                                    </nav>
+                                 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="center_box cb">
+            <div class="uo_tabs cf">
+                <a href="#"><span>profile</a>
+                <a href="#"><span>Reviews</span></a>
+                <a href="#"><span>orders</span></a>
+                <a href="#" class="active"><span>My Address</span></a>
+                <a href="#"><span>Settings</span></a>
+            </div>
+            <div class="page_content bg_gray">
+                <div class="uo_header">
+                    <div class="wrapper cf">
+                        <div class="wbox ava">
+                            <figure><img src="assets/imgc/user_ava_1_140.jpg" alt="Helena Afrassiabi" /></figure>
+                        </div>
+                        <div class="main_info">
+                            <h1>Helena Afrassiabi</h1>
+                            <div class="midbox">
+                                <h4>560 points</h4>
+                                <div class="info_nav">
+                                    <a href="#">Get Free Points</a>
+                                    <span class="sepor"></span>
+                                    <a href="#">Win iPad</a>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="item">
+                                    <div class="num">30</div>
+                                    <div class="title">total orders</div>
+                                </div>
+                                <div class="item">
+                                    <div class="num">14</div>
+                                    <div class="title">total reviews</div>
+                                </div>
+                                <div class="item">
+                                    <div class="num">0</div>
+                                    <div class="title">total gifts</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="clear"></div>
-            </div>
-    </div>
-    </header>
-
-    <div class="center_box cb">
-        <div class="uo_tabs cf">
-            <a href="#"><span>profile</span></a>
-            <a href="#"><span>Reviews</span></a>
-            <a href="#"><span>orders</span></a>
-            <a href="#" class="active"><span>My Address</span></a>
-            <a href="#"><span>Settings</span></a>
-        </div>
-        <div class="page_content bg_gray">
-            <div class="uo_header">
-                <div class="wrapper cf">
-                    <div class="wbox ava">
-                        <figure><img src="assets/imgc/user_ava_1_140.jpg" alt="Helena Afrassiabi"/></figure>
-                    </div>
-                    <div class="main_info">
-                        <h1>Helena Afrassiabi</h1>
-                        <div class="midbox">
-                            <h4>560 points</h4>
-                            <div class="info_nav">
-                                <a href="#">Get Free Points</a>
-                                <span class="sepor"></span>
-                                <a href="#">Win iPad</a>
-                            </div>
-                        </div>
-                        <div class="stat">
-                            <div class="item">
-                                <div class="num">30</div>
-                                <div class="title">total orders</div>
-                            </div>
-                            <div class="item">
-                                <div class="num">14</div>
-                                <div class="title">total reviews</div>
-                            </div>
-                            <div class="item">
-                                <div class="num">0</div>
-                                <div class="title">total gifts</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="uo_body">
                 <div class="wrapper">
@@ -191,7 +188,7 @@ try {
                         <div class="l_col adrs">
                             <h2>Add New Address</h2>
 
-                            <form action="/" method="get">
+                            <form action="/" method="post">
                                 <div class="field">
                                     <label for="name">Name *</label>
                                     <input type="text" value="" palceholder="" id="name" name="name"
@@ -201,21 +198,12 @@ try {
                                     <label for="city">Your city *</label>
                                     <input type="text" value="" palceholder="" id="city" name="city"
                                            class="vl_empty" required/>
-                                    <!--                                        <select class="vl_empty" required>-->
-                                    <!--                                            <option class="plh"></option>-->
-                                    <!--                                            <option value="1">City 1</option>-->
-                                    <!--                                            <option value="2">City 2</option>-->
-                                    <!--                                        </select>-->
+
                                 </div>
                                 <div class="field">
                                     <label for="area">Your area *</label>
                                     <input type="text" value="" palceholder="" id="area" name="area"
                                            class="vl_empty" required/>
-                                    <!--                                        <select required>-->
-                                    <!--                                            <option class="plh"></option>-->
-                                    <!--                                            <option>Area 1</option>-->
-                                    <!--                                            <option>Area 2</option>-->
-                                    <!--                                        </select>-->
                                 </div>
 
                                 <div class="field">
@@ -230,8 +218,8 @@ try {
                                 </div>
 
                                 <div class="field">
-                                    <label class="pos_top">Additional information</label>
-                                    <textarea rows="12" id="addit_info" name="addit_info"></textarea>
+                                    <label for="addit_info" class="pos_top">Additional information</label>
+                                    <textarea rows="20" cols="45" id="addit_info" name="addit_info"></textarea>
                                 </div>
 
                                 <div class="field">
@@ -239,7 +227,6 @@ try {
                                            class="green_btn"/>
                                 </div>
                             </form>
-                            <? var_dump($_POST)?>
 
 
                         </div>
@@ -257,32 +244,13 @@ try {
                                         <h3><?= $value->name ?></h3>
                                         <p><?= $value->city ?>,<?= $value->area ?>, <?= $value->street ?>
                                             , <?= $value->house ?> ,<?= $value->addit_info ?></p>
+
                                         <div class="actbox">
                                             <a href="index.php?del_id=<?= $id = $value->id ?>" name="del" id="del"
                                                class="bcross"></a>
                                         </div>
                                         <div id="map" style="width: 450px; height: 400px;"></div>
-
                                         <script>
-
-                                            // function initMap() {
-                                            //     var pos = {lat: 51.513416, lng: -0.129761};
-                                            //     var opt = {
-                                            //
-                                            //         center: pos,
-                                            //         zoom: 15,
-                                            //         scrollwheel:true,
-                                            //     };
-                                            //     var myMap = new google.maps.Map(document.getElementById("map"), opt);
-                                            //
-                                            //     var marker = new google.maps.Marker({
-                                            //         position: pos,
-                                            //         map: myMap,
-                                            //         title: 'Я тут',
-                                            //         //  icon:''
-                                            //     });
-                                            //
-                                            // }
 
                                             function initMap() {
                                                 var map = new google.maps.Map(document.getElementById('map'), {
@@ -298,7 +266,6 @@ try {
 
                                             function geocodeAddress(geocoder, resultsMap) {
                                                 var address = document.getElementById('city').value;
-                                               alert(address);
                                                 geocoder.geocode({'city': address}, function(results, status) {
                                                     if (status === 'OK') {
                                                         resultsMap.setCenter(results[0].geometry.location);
@@ -389,9 +356,6 @@ try {
     </div>
 </footer>
 </div>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiPJOLvBwrSUQAuxp3BZyaJwrPeHPJ0EY&callback=initMap">
-</script>
-</body>
 
+</body>
 </html>
