@@ -28,8 +28,9 @@ try {
     <meta charset="UTF-8">
 
     <title>address ::: user office ::: foodclub</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href="assets/css/default.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <link href="assets/css/default.css" rel="stylesheet" type="text/css"/>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiPJOLvBwrSUQAuxp3BZyaJwrPeHPJ0EY&callback=initMap"
             async defer></script>
 
@@ -43,7 +44,7 @@ try {
                 <div class="wrapper">
 
                     <div class="logo_box">
-                        <a href="index.html"><img src="assets/img/logo.png" alt="foodclub" /></a>
+                        <a href="index.html"><img src="assets/img/logo.png" alt="foodclub"/></a>
                     </div>
 
                     <div class="lng_box">
@@ -72,7 +73,8 @@ try {
                                             <span class="ico ico_1"></span>
                                             <div class="text_box">
                                                 <h3>5 points</h3>
-                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your balance!</p>
+                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your
+                                                    balance!</p>
                                             </div>
                                             <a href="#" class="gcross"></a>
                                         </li>
@@ -80,7 +82,8 @@ try {
                                             <span class="ico ico_2"></span>
                                             <div class="text_box">
                                                 <h3>5 points</h3>
-                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your balance!</p>
+                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your
+                                                    balance!</p>
                                             </div>
                                             <a href="#" class="gcross"></a>
                                         </li>
@@ -88,7 +91,8 @@ try {
                                             <span class="ico ico_3"></span>
                                             <div class="text_box">
                                                 <h3>5 points</h3>
-                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your balance!</p>
+                                                <p>Thank you for visiting FoodClub.<br/>You got 5 more points on your
+                                                    balance!</p>
                                             </div>
                                             <a href="#" class="gcross"></a>
                                         </li>
@@ -98,7 +102,7 @@ try {
                             </div>
                             <div class="navbox">
                                 <a href="#" class="midbox nftoggle">
-                                    <img src="assets/imgc/user_ava_1_40.jpg" alt="" />
+                                    <img src="assets/imgc/user_ava_1_40.jpg" alt=""/>
                                     <span class="warrd"></span>
                                 </a>
                                 <nav class="utnav">
@@ -152,7 +156,7 @@ try {
                 <div class="uo_header">
                     <div class="wrapper cf">
                         <div class="wbox ava">
-                            <figure><img src="assets/imgc/user_ava_1_140.jpg" alt="Helena Afrassiabi" /></figure>
+                            <figure><img src="assets/imgc/user_ava_1_140.jpg" alt="Helena Afrassiabi"/></figure>
                         </div>
                         <div class="main_info">
                             <h1>Helena Afrassiabi</h1>
@@ -182,107 +186,108 @@ try {
                     </div>
                 </div>
 
-            <div class="uo_body">
-                <div class="wrapper">
-                    <div class="uofb cf">
-                        <div class="l_col adrs">
-                            <h2>Add New Address</h2>
+                <div class="uo_body">
+                    <div class="wrapper">
+                        <div class="uofb cf">
+                            <div class="l_col adrs">
+                                <h2>Add New Address</h2>
 
-                            <form action="/" method="post">
-                                <div class="field">
-                                    <label for="name">Name *</label>
-                                    <input type="text" value="" palceholder="" id="name" name="name"
-                                           class="vl_empty" required/>
-                                </div>
-                                <div class="field">
-                                    <label for="city">Your city *</label>
-                                    <input type="text" value="" palceholder="" id="city" name="city"
-                                           class="vl_empty" required/>
-
-                                </div>
-                                <div class="field">
-                                    <label for="area">Your area *</label>
-                                    <input type="text" value="" palceholder="" id="area" name="area"
-                                           class="vl_empty" required/>
-                                </div>
-
-                                <div class="field">
-                                    <label for="street">Street</label>
-                                    <input type="text" value="" palceholder="" id="street" name="street"
-                                           class="vl_empty"/>
-                                </div>
-                                <div class="field">
-                                    <label for="house">House * </label>
-                                    <input type="text" value="" palceholder="House Name / Number" id="house"
-                                           name="house" required/>
-                                </div>
-
-                                <div class="field">
-                                    <label for="addit_info" class="pos_top">Additional information</label>
-                                    <textarea rows="20" cols="45" id="addit_info" name="addit_info"></textarea>
-                                </div>
-
-                                <div class="field">
-                                    <input type="submit" value="add address" id="submit" name="submit"
-                                           class="green_btn"/>
-                                </div>
-                            </form>
-
-
-                        </div>
-
-                        <div class="r_col">
-                            <h2>My Addresses</h2>
-
-                            <div class="uo_adr_list">
-                                <? $results = $show->getAddressInfo(); ?>
-                                <? foreach ($results
-
-                                as $value) : ?>
-                                <tr>
-                                    <div class="item">
-                                        <h3><?= $value->name ?></h3>
-                                        <p><?= $value->city ?>,<?= $value->area ?>, <?= $value->street ?>
-                                            , <?= $value->house ?> ,<?= $value->addit_info ?></p>
-
-                                        <div class="actbox">
-                                            <a href="index.php?del_id=<?= $id = $value->id ?>" name="del" id="del"
-                                               class="bcross"></a>
-                                        </div>
-                                        <div id="map" style="width: 450px; height: 400px;"></div>
-                                        <script>
-
-                                            function initMap() {
-                                                var map = new google.maps.Map(document.getElementById('map'), {
-                                                    zoom: 8,
-                                                    center: {lat: -34.397, lng: 150.644}
-                                                });
-                                                var geocoder = new google.maps.Geocoder();
-
-                                                document.getElementById('submit').addEventListener('click', function() {
-                                                    geocodeAddress(geocoder, map);
-                                                });
-                                            }
-
-                                            function geocodeAddress(geocoder, resultsMap) {
-                                                var address = document.getElementById('city').value;
-                                                geocoder.geocode({'city': address}, function(results, status) {
-                                                    if (status === 'OK') {
-                                                        resultsMap.setCenter(results[0].geometry.location);
-                                                        var marker = new google.maps.Marker({
-                                                            map: resultsMap,
-                                                            position: results[0].geometry.location
-                                                        });
-                                                    } else {
-                                                        alert('Geocode was not successful for the following reason: ' + status);
-                                                    }
-                                                });
-                                            }
-
-                                        </script>
+                                <form action="/" method="post">
+                                    <div class="field">
+                                        <label for="name">Name *</label>
+                                        <input type="text" value="" palceholder="" id="name" name="name"
+                                               class="vl_empty" required/>
                                     </div>
-                                    <? endforeach ?>
+                                    <div class="field">
+                                        <label for="city">Your city *</label>
+                                        <input type="text" value="" palceholder="" id="city" name="city"
+                                               class="vl_empty" required/>
 
+                                    </div>
+                                    <div class="field">
+                                        <label for="area">Your area *</label>
+                                        <input type="text" value="" palceholder="" id="area" name="area"
+                                               class="vl_empty" required/>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="street">Street</label>
+                                        <input type="text" value="" palceholder="" id="street" name="street"
+                                               class="vl_empty"/>
+                                    </div>
+                                    <div class="field">
+                                        <label for="house">House * </label>
+                                        <input type="text" value="" palceholder="House Name / Number" id="house"
+                                               name="house" required/>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="addit_info" class="pos_top">Additional information</label>
+                                        <textarea rows="20" cols="45" id="addit_info" name="addit_info"></textarea>
+                                    </div>
+
+                                    <div class="field">
+                                        <input type="submit" value="add address" id="submit" name="submit"
+                                               class="green_btn"/>
+                                    </div>
+                                </form>
+
+
+                            </div>
+
+                            <div class="r_col">
+                                <h2>My Addresses</h2>
+
+                                <div class="uo_adr_list">
+                                    <? $results = $show->getAddressInfo(); ?>
+                                    <? foreach ($results
+
+                                    as $value) : ?>
+                                    <tr>
+                                        <div class="item">
+                                            <h3><?= $value->name ?></h3>
+                                            <p><?= $value->city ?>,<?= $value->area ?>, <?= $value->street ?>
+                                                , <?= $value->house ?> ,<?= $value->addit_info ?></p>
+
+                                            <div class="actbox">
+                                                <a href="index.php?del_id=<?= $id = $value->id ?>" name="del" id="del"
+                                                   class="bcross"></a>
+                                            </div>
+                                            <div id="map" style="width: 450px; height: 400px;"></div>
+                                            <script>
+
+                                                function initMap() {
+                                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                                        zoom: 8,
+                                                        center: {lat: -34.397, lng: 150.644}
+                                                    });
+                                                    var geocoder = new google.maps.Geocoder();
+
+                                                    document.getElementById('submit').addEventListener('click', function () {
+                                                        geocodeAddress(geocoder, map);
+                                                    });
+                                                }
+
+                                                function geocodeAddress(geocoder, resultsMap) {
+                                                    var address = document.getElementById('city').value;
+                                                    geocoder.geocode({'city': address}, function (results, status) {
+                                                        if (status === 'OK') {
+                                                            resultsMap.setCenter(results[0].geometry.location);
+                                                            var marker = new google.maps.Marker({
+                                                                map: resultsMap,
+                                                                position: results[0].geometry.location
+                                                            });
+                                                        } else {
+                                                            alert('Geocode was not successful for the following reason: ' + status);
+                                                        }
+                                                    });
+                                                }
+
+                                            </script>
+                                        </div>
+                                        <? endforeach ?>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -290,71 +295,70 @@ try {
             </div>
         </div>
     </div>
-</div>
 
-<footer>
-    <div class="center_box">
-        <div class="wrapper">
-
-            <nav class="f_nav">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span class="fadv_ico"><span class="ico_1"></span></span>
-                            <span class="title">Rewards Program</span>
-                            <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fadv_ico"><span class="ico_2"></span></span>
-                            <span class="title">monthly lottery</span>
-                            <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fadv_ico"><span class="ico_3"></span></span>
-                            <span class="title">Restaurant Owners</span>
-                            <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fadv_ico"><span class="ico_4"></span></span>
-                            <span class="title">about foodclub</span>
-                            <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="bt_box">
+    <footer>
         <div class="center_box">
             <div class="wrapper">
-                <div class="soc_link">
-                    <a href="#" class="apple"></a>
-                    <a href="#" class="android"></a>
-                    <a href="#" class="email"></a>
-                    <a href="#" class="fb"></a>
-                </div>
-                <div class="copyright">
-                    <div>© 2014 Zomlex Inc. All rights reserved.</div>
-                    <nav>
-                        <a href="#">Partner Agreement</a>
-                        <span>|</span>
-                        <a href="#">User Agreement</a>
-                        <span>|</span>
-                        <a href="#">FAQ</a>
-                        <span>|</span>
-                        <a href="#">Careers</a>
-                    </nav>
+
+                <nav class="f_nav">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="fadv_ico"><span class="ico_1"></span></span>
+                                <span class="title">Rewards Program</span>
+                                <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fadv_ico"><span class="ico_2"></span></span>
+                                <span class="title">monthly lottery</span>
+                                <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fadv_ico"><span class="ico_3"></span></span>
+                                <span class="title">Restaurant Owners</span>
+                                <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fadv_ico"><span class="ico_4"></span></span>
+                                <span class="title">about foodclub</span>
+                                <span class="descr">We’re empowering businesses and teams to put Design first by helping them roll up their sleeves and apply customer-centric product.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="bt_box">
+            <div class="center_box">
+                <div class="wrapper">
+                    <div class="soc_link">
+                        <a href="#" class="apple"></a>
+                        <a href="#" class="android"></a>
+                        <a href="#" class="email"></a>
+                        <a href="#" class="fb"></a>
+                    </div>
+                    <div class="copyright">
+                        <div>© 2014 Zomlex Inc. All rights reserved.</div>
+                        <nav>
+                            <a href="#">Partner Agreement</a>
+                            <span>|</span>
+                            <a href="#">User Agreement</a>
+                            <span>|</span>
+                            <a href="#">FAQ</a>
+                            <span>|</span>
+                            <a href="#">Careers</a>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </div>
 
 </body>
