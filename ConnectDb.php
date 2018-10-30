@@ -3,7 +3,7 @@
 class ConnectDb
 {
     private $host = 'localhost';
-    private $dbname = 'antagosoft';
+    private $dbname = 'food';
     private $username = 'root';
     private $password = '';
 
